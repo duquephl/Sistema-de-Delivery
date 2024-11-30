@@ -1,13 +1,14 @@
 package calculos;
 
-import java.util.Map;
+import java.util.HashMap;
 import model.*;
 
 public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
-    private Map<String, Double> descontosPorTipoItem;
+    private HashMap<String, Double> descontosPorTipoItem;
     private String tipoItem;
     //Para itens da categoria "Alimentação", é concedido um desconto de R$ 5,00; para itens de "Educação", o desconto é de R$ 2,00; e para itens classificados como "Lazer", o desconto corresponde a R$ 1,50.
     public FormaDescontoTipoItem(){
+        this.descontosPorTipoItem = new HashMap<>();
         this.descontosPorTipoItem.put("alimentação", 5.0);
         this.descontosPorTipoItem.put("educação", 2.0);
         this.descontosPorTipoItem.put("lazer", 1.5);
