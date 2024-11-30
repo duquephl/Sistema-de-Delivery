@@ -11,7 +11,7 @@ public class Main {
         Item item = new Item("Camisa", 50, 250., "lazer");
         pedido.adicionarItem(item);
         CalculadoraDeDescontoService calculadora = new CalculadoraDeDescontoService();
-        calculadora.calcularDesconto(pedido);
+        pedido.adicionarListaCuponsDescontoEntrega(calculadora.calcularDesconto(pedido));
         System.out.println(pedido);
     }
 }

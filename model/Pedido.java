@@ -55,9 +55,13 @@ public class Pedido {
         return this.cuponsDescontoEntrega;
     }
 
+    public void adicionarListaCuponsDescontoEntrega(List<CupomDescontoEntrega> cupons){
+        this.cuponsDescontoEntrega.addAll(cupons);
+    }
+
     @Override
     public String toString(){
-        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido();
+        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido() + "\nValor Total: " + (this.getValorPedido() + this.taxaEntrega - this.getDescontoConcedido());
     }
 
 }
