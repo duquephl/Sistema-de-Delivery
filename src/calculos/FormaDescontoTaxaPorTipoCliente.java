@@ -1,5 +1,9 @@
 package src.calculos;
 
+import java.util.HashMap;
+import java.util.Map;
+import src.model.*;
+
 public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntrega{
     private Map<String, Double> descontosPorTipoCliente;
     private String tipoCliente;
@@ -12,12 +16,15 @@ public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntreg
         this.descontosPorTipoCliente.put("bronze", 1.0);
     }
 
+    @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido) {
         if (this.seAplica(pedido)){
             return new CupomDescontoEntrega("Desconto por tipo de cliente", this.descontosPorTipoCliente.get(this.tipoCliente));
         }
+        return null;
     }
-
+    
+    @Override
     public boolean seAplica(Pedido pedido) {
         this.tipoCliente = pedido.getCliente().getTipo().toLowerCase();
         return tipoCliente.equals("ouro") || tipoCliente.equals("prata") || tipoCliente.equals("bronze");

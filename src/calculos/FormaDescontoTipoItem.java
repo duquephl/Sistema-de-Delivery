@@ -1,5 +1,6 @@
 package src.calculos;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import src.model.*;

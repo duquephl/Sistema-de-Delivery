@@ -1,5 +1,8 @@
 package src.calculos;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import src.model.CupomDescontoEntrega;
 import src.model.Pedido;
 
@@ -14,11 +17,12 @@ public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
         this.descontosPorBairroCliente.put("Cidade Maravilhosa", 1.5);
     }
 
+    @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido) {
         if (this.seAplica(pedido)){
             return new CupomDescontoEntrega("Desconto por bairro do cliente", this.descontosPorBairroCliente.get(this.bairroCliente));
         }
-        
+        return null;
     }
     
     @Override
