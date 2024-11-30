@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/main/Main.java
-package src.main;
-=======
 import desconto.FormaDescontoTaxaPorBairro;
-import d
->>>>>>> 11b57fede4d34f1439814a2f755c4a0cc5e4899c:Main.java
 
 public class Main {
     public static void main(String[] args) {
