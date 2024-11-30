@@ -21,7 +21,7 @@ public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntreg
         if (this.seAplica(pedido)){
             return new CupomDescontoEntrega("Desconto por tipo de cliente", this.descontosPorTipoCliente.get(this.tipoCliente));
         }
-        return null;
+        return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
     
     @Override

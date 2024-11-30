@@ -11,7 +11,7 @@ public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
         if (this.seAplica(pedido)){
             return new CupomDescontoEntrega("Desconto por valor do pedido", this.valorDesconto);
         }
-        return null;
+        return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
 
     @Override

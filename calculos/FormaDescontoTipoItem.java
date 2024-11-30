@@ -18,7 +18,7 @@ public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
         if (this.seAplica(pedido)){
             return new CupomDescontoEntrega("Desconto por tipo de item", this.descontosPorTipoItem.get(this.tipoItem));
         }
-        return null;
+        return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
 
     @Override
