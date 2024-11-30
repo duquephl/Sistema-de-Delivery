@@ -12,6 +12,7 @@ public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
         this.descontosPorTipoItem.put("alimentação", 5.0);
         this.descontosPorTipoItem.put("educação", 2.0);
         this.descontosPorTipoItem.put("lazer", 1.5);
+        System.out.println("Descontos por tipo de item: " + this.descontosPorTipoItem);
     }
 
     @Override

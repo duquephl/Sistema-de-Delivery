@@ -5,20 +5,28 @@ import calculos.FormaDescontoTaxaPorTipoCliente;
 import calculos.FormaDescontoTipoItem;
 import calculos.FormaDescontoValorPedido;
 import java.util.ArrayList;
-import java.util.List;
 import model.*;
 
 public class CalculadoraDeDescontoService{
-    public List<CupomDescontoEntrega> calcularDesconto(Pedido pedido){
-        List<CupomDescontoEntrega> cupons = new ArrayList<>();
-        FormaDescontoTaxaPorBairro descontoBairro = new FormaDescontoTaxaPorBairro();
-        FormaDescontoTaxaPorTipoCliente descontoTipoCliente = new FormaDescontoTaxaPorTipoCliente();
-        FormaDescontoTipoItem descontoTipoItem = new FormaDescontoTipoItem();
-        FormaDescontoValorPedido descontoValorPedido = new FormaDescontoValorPedido();
-        cupons.add(descontoBairro.calcularDesconto(pedido));
-        cupons.add(descontoTipoCliente.calcularDesconto(pedido));
-        cupons.add(descontoTipoItem.calcularDesconto(pedido));
-        cupons.add(descontoValorPedido.calcularDesconto(pedido));
+    private ArrayList<CupomDescontoEntrega> cupons;
+    private FormaDescontoTaxaPorBairro descontoBairro;
+    private FormaDescontoTaxaPorTipoCliente descontoTipoCliente;
+    private FormaDescontoTipoItem descontoTipoItem;
+    private FormaDescontoValorPedido descontoValorPedido;
+
+    public CalculadoraDeDescontoService(){
+        this.descontoBairro = new FormaDescontoTaxaPorBairro();
+        this.descontoTipoCliente = new FormaDescontoTaxaPorTipoCliente();
+        this.descontoTipoItem = new FormaDescontoTipoItem();
+        this.descontoValorPedido = new FormaDescontoValorPedido();
+    }
+
+    public ArrayList<CupomDescontoEntrega> calcularDesconto(Pedido pedido){
+        this.cupons = new ArrayList<>();
+        this.cupons.add(this.descontoBairro.calcularDesconto(pedido));
+        this.cupons.add(this.descontoTipoCliente.calcularDesconto(pedido));
+        this.cupons.add(this.descontoTipoItem.calcularDesconto(pedido));
+        this.cupons.add(this.descontoValorPedido.calcularDesconto(pedido));
         return cupons;
     }
 

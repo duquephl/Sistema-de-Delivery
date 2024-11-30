@@ -14,6 +14,7 @@ public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntreg
         this.descontosPorTipoCliente.put("ouro", 3.0);
         this.descontosPorTipoCliente.put("prata", 2.0);
         this.descontosPorTipoCliente.put("bronze", 1.0);
+        System.out.println("Descontos por tipo de cliente: " + this.descontosPorTipoCliente);
     }
 
     @Override
