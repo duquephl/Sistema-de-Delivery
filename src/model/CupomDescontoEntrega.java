@@ -1,3 +1,5 @@
+package src.model;
+
 public class CupomDescontoEntrega {
     private String nomeMetodo;
     private double valorDesconto;
@@ -13,9 +15,5 @@ public class CupomDescontoEntrega {
 
     public double getValorDesconto() {
         return this.valorDesconto;
-    }
-
-    public String getNomeMetodo() {
-        return this.nomeMetodo;
     }
 }

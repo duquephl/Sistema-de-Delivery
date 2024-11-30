@@ -1,3 +1,5 @@
+package src.calculos;
+
 public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntrega{
     private Map<String, Double> descontosPorTipoCliente;
     private String tipoCliente;

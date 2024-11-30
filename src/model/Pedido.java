@@ -1,8 +1,13 @@
+package src.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pedido { 
     Double taxaEntrega = 10.0;
     private Cliente cliente;
-    private Item[] itens;
-    private CupomDescontoEntrega[] cuponsDescontoEntrega;
+    private List<Item> itens = new ArrayList<Item>();
+    private List<CupomDescontoEntrega> cuponsDescontoEntrega = new ArrayList<CupomDescontoEntrega>();
     private String data;
 
     public Pedido(String data, Cliente cliente){

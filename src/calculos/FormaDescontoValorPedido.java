@@ -1,3 +1,5 @@
+package src.calculos;
+
 public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     public CupomDescontoEntrega calcularDesconto(Pedido pedido){
 

@@ -1,6 +1,11 @@
+package src.calculos;
+
+import src.model.CupomDescontoEntrega;
+import src.model.Pedido;
+
 public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
     private String bairroCliente;    
-    // R$ 2,00 para o bairro "Centro", R$ 3,00 para "Bela Vista" e R$ 1,50 para "Cidade Maravilhosa"
+    @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido) {
         if (this.seAplica(pedido)) {
             /// @TODO: Implementação Duvidoza
@@ -15,7 +20,8 @@ public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
         return null;
         
     }
-
+    
+    @Override
     public boolean seAplica(Pedido pedido) {
         this.bairroCliente = pedido.getCliente().getBairro();
         if (this.bairroCliente.equals("Centro") || this.bairroCliente.equals("Bela Vista") || this.bairroCliente.equals("Cidade Maravilhosa")){
@@ -24,6 +30,4 @@ public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
         return false;
         
     }
-
-
 }
