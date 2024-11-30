@@ -55,6 +55,7 @@ public class Pedido {
         return this.cuponsDescontoEntrega;
     }
 
+    @Override
     public String toString(){
         return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido();
     }

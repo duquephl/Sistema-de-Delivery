@@ -45,6 +45,7 @@ public class Cliente {
         return this.cidade;
     }
 
+    @Override
     public String toString() {
         return "Nome: " + this.nome + "\nTipo: " + this.tipo + "\nFidelidade: " + this.fidelidade + "\nLogradouro: " + this.logradouro + "\nBairro: " + this.bairro + "\nCidade: " + this.cidade;
     }

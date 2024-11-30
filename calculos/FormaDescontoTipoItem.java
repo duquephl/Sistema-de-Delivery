@@ -20,6 +20,7 @@ public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
         }
         return null;
     }
+
     @Override
     public boolean seAplica(Pedido pedido){
         for (Item item : pedido.getItens()){

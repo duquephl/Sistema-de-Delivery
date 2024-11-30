@@ -21,6 +21,7 @@ public class Item{
         return this.tipo;
     }
 
+    @Override
     public String toString(){
         return "Nome: " + this.nome + "\nQuantidade: " + this.quantidade + "\nValor Unitário: " + this.valorUnitario + "\nTipo: " + this.tipo;
     }
