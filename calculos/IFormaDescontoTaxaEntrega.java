@@ -1,6 +1,6 @@
-package src.calculos;
+package calculos;
 
-import src.model.*;
+import model.*;
 
 public interface IFormaDescontoTaxaEntrega{
     public CupomDescontoEntrega calcularDesconto(Pedido pedido);

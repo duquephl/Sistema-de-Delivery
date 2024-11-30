@@ -1,6 +1,6 @@
-package src.calculos;
+package calculos;
 
-import src.model.*;
+import model.*;
 
 public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     private double limiteValorPedido = 200.0;

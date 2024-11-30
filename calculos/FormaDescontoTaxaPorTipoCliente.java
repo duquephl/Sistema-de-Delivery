@@ -1,8 +1,8 @@
-package src.calculos;
+package calculos;
 
 import java.util.HashMap;
 import java.util.Map;
-import src.model.*;
+import model.*;
 
 public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntrega{
     private Map<String, Double> descontosPorTipoCliente;

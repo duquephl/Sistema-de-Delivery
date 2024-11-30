@@ -1,17 +1,14 @@
-package src.calculos;
+package calculos;
 
-import java.util.HashMap;
 import java.util.Map;
-
-import src.model.CupomDescontoEntrega;
-import src.model.Pedido;
+import model.CupomDescontoEntrega;
+import model.Pedido;
 
 public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
     private Map<String, Double> descontosPorBairroCliente;
     private String bairroCliente;    
     // R$ 2,00 para o bairro "Centro", R$ 3,00 para "Bela Vista" e R$ 1,50 para "Cidade Maravilhosa"
     public FormaDescontoTaxaPorBairro(){
-        this.descontosPorBairroCliente = new HashMap<String, Double>();
         this.descontosPorBairroCliente.put("Centro", 2.0);
         this.descontosPorBairroCliente.put("Bela Vista", 3.0);
         this.descontosPorBairroCliente.put("Cidade Maravilhosa", 1.5);
