@@ -1,7 +1,10 @@
 package com.ufes.calculos;
 
 import java.util.HashMap;
-import com.ufes.model.*;
+
+import com.ufes.model.CupomDescontoEntrega;
+import com.ufes.model.Item;
+import com.ufes.model.Pedido;
 
 public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
     private HashMap<String, Double> descontosPorTipoItem;
