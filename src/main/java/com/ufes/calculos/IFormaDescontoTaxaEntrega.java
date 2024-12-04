@@ -1,6 +1,6 @@
-package calculos;
+package com.ufes.calculos;
 
-import model.*;
+import com.ufes.model.*;
 
 public interface IFormaDescontoTaxaEntrega{
     public CupomDescontoEntrega calcularDesconto(Pedido pedido);

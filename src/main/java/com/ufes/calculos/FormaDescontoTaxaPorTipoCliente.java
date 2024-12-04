@@ -1,8 +1,8 @@
-package calculos;
+package com.ufes.calculos;
 
 import java.util.HashMap;
 import java.util.Map;
-import model.*;
+import com.ufes.model.*;
 
 public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntrega{
     private Map<String, Double> descontosPorTipoCliente;

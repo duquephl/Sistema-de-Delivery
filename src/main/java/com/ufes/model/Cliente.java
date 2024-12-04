@@ -1,4 +1,4 @@
-package model;
+package com.ufes.model;
 
 public class Cliente {
     private String nome;

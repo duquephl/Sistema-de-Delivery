@@ -1,7 +1,6 @@
-package log;
+package com.ufes.log;
 
-public class DBLog implements Ilog{
-    @Override
+public class XMLLog implements Ilog{
     public void escrever(String message) {
         // Implementação para gravar log em um banco de dados
     }

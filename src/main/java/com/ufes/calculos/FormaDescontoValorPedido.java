@@ -1,6 +1,6 @@
-package calculos;
+package com.ufes.calculos;
 
-import model.*;
+import com.ufes.model.*;
 
 public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     private double limiteValorPedido = 200.0;

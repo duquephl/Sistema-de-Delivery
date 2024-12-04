@@ -1,7 +1,9 @@
-import model.Cliente;
-import model.Item;
-import model.Pedido;
-import service.CalculadoraDeDescontoService;
+package com.ufes;
+
+import com.ufes.model.Cliente;
+import com.ufes.model.Item;
+import com.ufes.model.Pedido;
+import com.ufes.service.CalculadoraDeDescontoService;
 
 
 public class Main {

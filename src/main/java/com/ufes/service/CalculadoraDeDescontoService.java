@@ -1,11 +1,9 @@
-package service;
+package com.ufes.service;
 
-import calculos.FormaDescontoTaxaPorBairro;
-import calculos.FormaDescontoTaxaPorTipoCliente;
-import calculos.FormaDescontoTipoItem;
-import calculos.FormaDescontoValorPedido;
 import java.util.ArrayList;
-import model.*;
+
+import com.ufes.calculos.*;
+import com.ufes.model.*;
 
 public class CalculadoraDeDescontoService{
     private ArrayList<CupomDescontoEntrega> cupons;
