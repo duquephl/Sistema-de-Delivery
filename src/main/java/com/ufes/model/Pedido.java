@@ -9,6 +9,7 @@ public class Pedido {
     private List<Item> itens = new ArrayList<Item>();
     private List<CupomDescontoEntrega> cuponsDescontoEntrega = new ArrayList<CupomDescontoEntrega>();
     private String data;
+    private String cupom;
 
     public Pedido(String data, Cliente cliente){
         this.data = data;
@@ -39,6 +40,14 @@ public class Pedido {
         return this.taxaEntrega;
     }
 
+    public String getCupom(){
+        return this.cupom;
+    }
+
+    public void setCupom(String cupom){
+        this.cupom = cupom;
+    }
+
     public void aplicarDescontoEntrega(CupomDescontoEntrega desconto){
         this.taxaEntrega -= desconto.getValorDesconto();
     }
@@ -61,7 +70,7 @@ public class Pedido {
 
     @Override
     public String toString(){
-        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido() + "\nValor Total: " + (this.getValorPedido() + this.taxaEntrega - this.getDescontoConcedido());
+        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido() + "\nValor Total: " + (this.getValorPedido() + this.taxaEntrega - this.getDescontoConcedido()) + "Lista de Cupons de Desconto: " + this.cuponsDescontoEntrega;
     }
 
 }
