@@ -2,6 +2,7 @@ package com.ufes.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Pedido { 
     Double taxaEntrega = 10.0;
@@ -9,8 +10,11 @@ public class Pedido {
     private List<Item> itens = new ArrayList<Item>();
     private List<CupomDescontoEntrega> cuponsDescontoEntrega = new ArrayList<CupomDescontoEntrega>();
     private String data;
+    private String cupom;
+    private int id;
 
     public Pedido(String data, Cliente cliente){
+        this.id = new Random().nextInt(100000);
         this.data = data;
         this.cliente = cliente;
     }
@@ -37,6 +41,18 @@ public class Pedido {
 
     public double getTaxaEntrega(){
         return this.taxaEntrega;
+    }
+
+    public String getCupom(){
+        return this.cupom;
+    }
+
+    public void setCupom(String cupom){
+        this.cupom = cupom;
+    }
+
+    public int getId(){
+        return this.id;
     }
 
     public void aplicarDescontoEntrega(CupomDescontoEntrega desconto){

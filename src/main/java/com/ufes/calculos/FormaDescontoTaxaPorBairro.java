@@ -2,6 +2,7 @@ package com.ufes.calculos;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.ufes.model.CupomDescontoEntrega;
 import com.ufes.model.Pedido;
 
@@ -14,7 +15,6 @@ public class FormaDescontoTaxaPorBairro implements IFormaDescontoTaxaEntrega{
         this.descontosPorBairroCliente.put("centro", 2.0);
         this.descontosPorBairroCliente.put("belavista", 3.0);
         this.descontosPorBairroCliente.put("cidademaravilhosa", 1.5);
-        System.out.println("Descontos por bairro: " + this.descontosPorBairroCliente);
     }
 
     @Override

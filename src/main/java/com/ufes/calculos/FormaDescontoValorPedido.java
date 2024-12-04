@@ -1,6 +1,7 @@
 package com.ufes.calculos;
 
-import com.ufes.model.*;
+import com.ufes.model.CupomDescontoEntrega;
+import com.ufes.model.Pedido;
 
 public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     private double limiteValorPedido = 200.0;
@@ -9,18 +10,13 @@ public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido){
         if (this.seAplica(pedido)){
-            System.out.println("Desconto por valor do pedido: " + this.valorDesconto);
             return new CupomDescontoEntrega("Desconto por valor do pedido", this.valorDesconto);
         }
-        System.out.println("Desconto por bairro do cliente: 0");
         return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
 
     @Override
     public boolean seAplica(Pedido pedido){
-        if (pedido.getValorPedido() > this.limiteValorPedido && pedido.getDescontoConcedido() < 10.0){
-            return true;
-        }
-        return false;
+        return pedido.getValorPedido() > this.limiteValorPedido && pedido.getDescontoConcedido() < 10.0;
     }
 }
