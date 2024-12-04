@@ -77,7 +77,7 @@ public class Pedido {
 
     @Override
     public String toString(){
-        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido() + "\nValor Total: " + (this.getValorPedido() + this.taxaEntrega - this.getDescontoConcedido()) + "Lista de Cupons de Desconto: " + this.cuponsDescontoEntrega;
+        return "Data: " + this.data + "\nCliente: " + this.cliente + "\nItens: " + this.itens + "\nTaxa de Entrega: " + this.taxaEntrega + "\nDesconto Concedido: " + this.getDescontoConcedido() + "\nValor Total: " + (this.getValorPedido() + this.taxaEntrega - this.getDescontoConcedido());
     }
 
 }
