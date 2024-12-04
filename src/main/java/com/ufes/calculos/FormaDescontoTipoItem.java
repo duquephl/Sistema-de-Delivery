@@ -1,7 +1,10 @@
 package com.ufes.calculos;
 
 import java.util.HashMap;
-import com.ufes.model.*;
+
+import com.ufes.model.CupomDescontoEntrega;
+import com.ufes.model.Item;
+import com.ufes.model.Pedido;
 
 public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
     private HashMap<String, Double> descontosPorTipoItem;
@@ -18,7 +21,7 @@ public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
     @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido){
         if (this.seAplica(pedido)){
-            return new CupomDescontoEntrega("Desconto por tipo de item", this.descontosPorTipoItem.get(this.tipoItem));
+            return new CupomDescontoEntrega("Desconto por tipo de item", this.descontosPorTipoItem.get(this.tipoItem)* pedido.getValorPedido());
         }
         return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
