@@ -16,7 +16,6 @@ public class FormaDescontoTaxaPorCupom implements IFormaDescontoTaxaEntrega{
         this.descontosPorCupom.put("DESC10", 0.1);
         this.descontosPorCupom.put("DESC20", 0.2);
         this.descontosPorCupom.put("DESC30", 0.3);
-        System.out.println("Descontos por cupom: " + this.descontosPorCupom);
     }
 
     @Override

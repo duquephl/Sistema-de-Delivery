@@ -16,13 +16,11 @@ public class FormaDescontoTaxaPorTipoCliente implements IFormaDescontoTaxaEntreg
         this.descontosPorTipoCliente.put("ouro", 0.3);
         this.descontosPorTipoCliente.put("prata", 0.2);
         this.descontosPorTipoCliente.put("bronze", 0.1);
-        System.out.println("Descontos por tipo de cliente: " + this.descontosPorTipoCliente);
     }
 
     @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido) {
         if (this.seAplica(pedido)){
-            System.out.println("Desconto por tipo de cliente: " + this.descontosPorTipoCliente.get(this.tipoCliente)* pedido.getValorPedido());
             return new CupomDescontoEntrega("Desconto por tipo de cliente", this.descontosPorTipoCliente.get(this.tipoCliente)* pedido.getValorPedido());
         }
         return new CupomDescontoEntrega("Desconto por bairro do cliente",0);

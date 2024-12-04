@@ -2,4 +2,4 @@
 
 Pedro Henrique de Lima Duque - 2022201324
 Guilherme Antony Dutra Merlo - 2021200512
-Hiago do Carmo Lopes
+Hiago do Carmo Lopes - 2022200636

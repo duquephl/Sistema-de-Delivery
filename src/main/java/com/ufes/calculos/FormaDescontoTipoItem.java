@@ -12,10 +12,9 @@ public class FormaDescontoTipoItem implements IFormaDescontoTaxaEntrega{
     //Para itens da categoria "Alimentação", é concedido um desconto de R$ 5,00; para itens de "Educação", o desconto é de R$ 2,00; e para itens classificados como "Lazer", o desconto corresponde a R$ 1,50.
     public FormaDescontoTipoItem(){
         this.descontosPorTipoItem = new HashMap<>();
-        this.descontosPorTipoItem.put("alimentacao", 5.0);
-        this.descontosPorTipoItem.put("educacao", 2.0);
-        this.descontosPorTipoItem.put("lazer", 1.5);
-        System.out.println("Descontos por tipo de item: " + this.descontosPorTipoItem);
+        this.descontosPorTipoItem.put("alimentacao",0.05);
+        this.descontosPorTipoItem.put("educacao", 0.2);
+        this.descontosPorTipoItem.put("lazer", 0.15);
     }
 
     @Override

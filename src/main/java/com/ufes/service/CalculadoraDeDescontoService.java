@@ -30,9 +30,11 @@ public class CalculadoraDeDescontoService{
         this.cupons = new ArrayList<>();
         this.cupons.add(this.descontoBairro.calcularDesconto(pedido));
         this.cupons.add(this.descontoTipoCliente.calcularDesconto(pedido));
-        this.cupons.add(this.descontoTipoItem.calcularDesconto(pedido));
         this.cupons.add(this.descontoValorPedido.calcularDesconto(pedido));
         this.cupons.add(this.descontoCupom.calcularDesconto(pedido));
+        if (this.cupons.isEmpty()){
+            this.cupons.add(this.descontoTipoItem.calcularDesconto(pedido));
+        }
         return cupons;
     }
 

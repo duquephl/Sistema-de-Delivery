@@ -10,10 +10,8 @@ public class FormaDescontoValorPedido implements IFormaDescontoTaxaEntrega{
     @Override
     public CupomDescontoEntrega calcularDesconto(Pedido pedido){
         if (this.seAplica(pedido)){
-            System.out.println("Desconto por valor do pedido: " + this.valorDesconto);
             return new CupomDescontoEntrega("Desconto por valor do pedido", this.valorDesconto);
         }
-        System.out.println("Desconto por bairro do cliente: 0");
         return new CupomDescontoEntrega("Desconto por bairro do cliente",0);
     }
 
