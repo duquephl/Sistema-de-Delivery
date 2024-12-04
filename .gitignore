@@ -5,6 +5,10 @@
 # Log file
 *.log
 
+log.db
+log.json
+log.xml
+
 # BlueJ files
 *.ctxt
 
